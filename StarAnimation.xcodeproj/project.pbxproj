@@ -14,6 +14,8 @@
 		413C46E61B744A4F00B56AD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413C46E51B744A4F00B56AD7 /* Images.xcassets */; };
 		413C46E91B744A4F00B56AD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413C46E71B744A4F00B56AD7 /* LaunchScreen.xib */; };
 		413C46F51B744A4F00B56AD7 /* StarAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C46F41B744A4F00B56AD7 /* StarAnimationTests.m */; };
+		413C47001B744AF700B56AD7 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C46FF1B744AF700B56AD7 /* StarView.m */; };
+		413C47031B7450D900B56AD7 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C47021B7450D900B56AD7 /* LineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		413C46EE1B744A4F00B56AD7 /* StarAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		413C46F31B744A4F00B56AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413C46F41B744A4F00B56AD7 /* StarAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarAnimationTests.m; sourceTree = "<group>"; };
+		413C46FE1B744AF700B56AD7 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		413C46FF1B744AF700B56AD7 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		413C47011B7450D900B56AD7 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
+		413C47021B7450D900B56AD7 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				413C46E51B744A4F00B56AD7 /* Images.xcassets */,
 				413C46E71B744A4F00B56AD7 /* LaunchScreen.xib */,
 				413C46D81B744A4F00B56AD7 /* Supporting Files */,
+				413C46FE1B744AF700B56AD7 /* StarView.h */,
+				413C46FF1B744AF700B56AD7 /* StarView.m */,
+				413C47011B7450D900B56AD7 /* LineView.h */,
+				413C47021B7450D900B56AD7 /* LineView.m */,
 			);
 			path = StarAnimation;
 			sourceTree = "<group>";
@@ -221,7 +231,9 @@
 			files = (
 				413C46E11B744A4F00B56AD7 /* ViewController.m in Sources */,
 				413C46DE1B744A4F00B56AD7 /* AppDelegate.m in Sources */,
+				413C47001B744AF700B56AD7 /* StarView.m in Sources */,
 				413C46DB1B744A4F00B56AD7 /* main.m in Sources */,
+				413C47031B7450D900B56AD7 /* LineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
