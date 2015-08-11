@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -12,30 +12,47 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQz-ST-uf3">
-                                <rect key="frame" x="272" y="590" width="57" height="30"/>
+                                <rect key="frame" x="159" y="637" width="57" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="ATl-d8-QHS"/>
+                                    <constraint firstAttribute="height" constant="30" id="Eqg-NA-2sO"/>
+                                </constraints>
                                 <state key="normal" title="Animate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="animateClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Yi5-se-Kt0"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Dk-iUI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="613"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UQz-ST-uf3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="570" id="01b-8d-aGe"/>
-                            <constraint firstAttribute="centerX" secondItem="UQz-ST-uf3" secondAttribute="centerX" id="e9J-8F-pYP"/>
+                            <constraint firstAttribute="trailing" secondItem="GxD-Dk-iUI" secondAttribute="trailing" id="2kA-pN-Eke"/>
+                            <constraint firstItem="UQz-ST-uf3" firstAttribute="top" secondItem="GxD-Dk-iUI" secondAttribute="bottom" constant="24" id="7qs-x8-DBI"/>
+                            <constraint firstItem="GxD-Dk-iUI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8Fa-le-viN"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="UQz-ST-uf3" secondAttribute="bottom" id="CYK-Hd-pbE"/>
+                            <constraint firstAttribute="centerX" secondItem="UQz-ST-uf3" secondAttribute="centerX" id="W36-P0-zec"/>
+                            <constraint firstItem="GxD-Dk-iUI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="via-W6-roX"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mainView" destination="GxD-Dk-iUI" id="cxo-63-Lml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="144"/>
+            <point key="canvasLocation" x="259.5" y="143.5"/>
         </scene>
     </scenes>
 </document>

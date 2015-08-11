@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface StarView : UIView
+typedef void(^executeAfterComplete)();
 
 @property (nonatomic, weak) CAShapeLayer *pathLayer;
 
-- (void)startAnimation;
+- (void)startAnimation: (executeAfterComplete) completionBlock;
 @end

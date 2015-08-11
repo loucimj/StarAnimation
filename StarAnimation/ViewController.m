@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "StarView.h"
-#import "LineView.h"
+#import "BubbleView.h"
 
 @interface ViewController ()
 
@@ -18,32 +17,43 @@
 
 @implementation ViewController
 
-StarView *star;
-LineView *line;
+BubbleView *bubbleView;
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
-    star = [[StarView alloc] init];
-    
-    line = [[LineView alloc] init];
+      
+    bubbleView = [[BubbleView alloc] initWithFrame:mainView.frame];
+    bubbleView.stateForAnimation = AnimationWithXPoint;
+//    bubbleView.stateForAnimation = AnimationWithYPoint;
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    star.frame = CGRectMake(self.view.frame.size.width/2-23, 150, 100, 100);
-    line.frame = CGRectMake(self.view.frame.size.width/2, 150+38, 10,400);
-    [self.view addSubview:star];
-    [self.view addSubview:line];
+
 }
 
+
 - (IBAction)animateClick:(id)sender {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [line startAnimation:^(void) { [star startAnimation]; }];
-    });
+    
+    if ([bubbleView isDescendantOfView:self.view]) {
+        bubbleView.layer.sublayers = nil;
+        [bubbleView removeFromSuperview];
+        [bubbleView initializeView];
+
+        
+    }
+    [mainView addSubview:bubbleView];
+    [bubbleView startAnimation];
+         
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

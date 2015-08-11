@@ -16,6 +16,9 @@
 		413C46F51B744A4F00B56AD7 /* StarAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C46F41B744A4F00B56AD7 /* StarAnimationTests.m */; };
 		413C47001B744AF700B56AD7 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C46FF1B744AF700B56AD7 /* StarView.m */; };
 		413C47031B7450D900B56AD7 /* LineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 413C47021B7450D900B56AD7 /* LineView.m */; };
+		637AC5271B77357900FC666F /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 637AC5261B77357900FC666F /* Circle.m */; };
+		637AC5291B7744E900FC666F /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 637AC5281B7744E900FC666F /* images.jpeg */; };
+		63A1F7221B7A0ABA00799126 /* BubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A1F7211B7A0ABA00799126 /* BubbleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,11 @@
 		413C46FF1B744AF700B56AD7 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
 		413C47011B7450D900B56AD7 /* LineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineView.h; sourceTree = "<group>"; };
 		413C47021B7450D900B56AD7 /* LineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineView.m; sourceTree = "<group>"; };
+		637AC5251B77357900FC666F /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		637AC5261B77357900FC666F /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		637AC5281B7744E900FC666F /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		63A1F7201B7A0ABA00799126 /* BubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleView.h; sourceTree = "<group>"; };
+		63A1F7211B7A0ABA00799126 /* BubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 		413C46D71B744A4F00B56AD7 /* StarAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				637AC5281B7744E900FC666F /* images.jpeg */,
 				413C46DC1B744A4F00B56AD7 /* AppDelegate.h */,
 				413C46DD1B744A4F00B56AD7 /* AppDelegate.m */,
 				413C46DF1B744A4F00B56AD7 /* ViewController.h */,
@@ -99,6 +108,10 @@
 				413C46FF1B744AF700B56AD7 /* StarView.m */,
 				413C47011B7450D900B56AD7 /* LineView.h */,
 				413C47021B7450D900B56AD7 /* LineView.m */,
+				637AC5251B77357900FC666F /* Circle.h */,
+				637AC5261B77357900FC666F /* Circle.m */,
+				63A1F7201B7A0ABA00799126 /* BubbleView.h */,
+				63A1F7211B7A0ABA00799126 /* BubbleView.m */,
 			);
 			path = StarAnimation;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413C46E41B744A4F00B56AD7 /* Main.storyboard in Resources */,
+				637AC5291B7744E900FC666F /* images.jpeg in Resources */,
 				413C46E91B744A4F00B56AD7 /* LaunchScreen.xib in Resources */,
 				413C46E61B744A4F00B56AD7 /* Images.xcassets in Resources */,
 			);
@@ -230,8 +244,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				413C46E11B744A4F00B56AD7 /* ViewController.m in Sources */,
+				63A1F7221B7A0ABA00799126 /* BubbleView.m in Sources */,
 				413C46DE1B744A4F00B56AD7 /* AppDelegate.m in Sources */,
 				413C47001B744AF700B56AD7 /* StarView.m in Sources */,
+				637AC5271B77357900FC666F /* Circle.m in Sources */,
 				413C46DB1B744A4F00B56AD7 /* main.m in Sources */,
 				413C47031B7450D900B56AD7 /* LineView.m in Sources */,
 			);
@@ -428,6 +444,7 @@
 				413C46FA1B744A4F00B56AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		413C46FB1B744A5000B56AD7 /* Build configuration list for PBXNativeTarget "StarAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +453,7 @@
 				413C46FD1B744A5000B56AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

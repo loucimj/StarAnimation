@@ -38,24 +38,27 @@
     [path3651Path addLineToPoint: CGPointMake(37.21, 45.5)];
     [path3651Path closePath];
     path3651Path.miterLimit = 4;
-    
+    UIGraphicsBeginImageContext(self.frame.size);
+
     [UIColor.whiteColor setFill];
     [path3651Path fill];
     [color0 setStroke];
     path3651Path.lineWidth = 2.02;
     [path3651Path stroke];
-    
+    UIGraphicsEndImageContext();
+
     return path3651Path;
 }
 
-- (void)startAnimation
+- (void)startAnimation: (executeAfterComplete) completionBlock
 {
+    
     if (self.pathLayer == nil)
     {
         CAShapeLayer *shapeLayer = [CAShapeLayer layer];
         
         shapeLayer.path = [[self samplePath] CGPath];
-        shapeLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
+        shapeLayer.strokeColor = [[UIColor whiteColor] CGColor];
         shapeLayer.fillColor = nil;
         shapeLayer.lineWidth = 2.5f;
         shapeLayer.lineJoin = kCALineCapRound;
@@ -70,7 +73,14 @@
     pathAnimation.fromValue = @(0.0f);
     pathAnimation.toValue = @(1.0f);
     pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    [self.pathLayer addAnimation:pathAnimation forKey:@"strokeEnd"];
+
+    
+    if (completionBlock != nil) {
+        [CATransaction setCompletionBlock: completionBlock];
+    }
+    [self.pathLayer addAnimation:pathAnimation forKey:@"strokeEnd"];    
+    [CATransaction commit];
+
 }
 
 @end
