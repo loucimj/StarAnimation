@@ -23,13 +23,14 @@ StarView *star;
 LineView *line;
 Circle *circle;
 
+UIImage *image;
 
 
 - (id)init {
     self = [super init];
     if (self) {
         
-        [self initializeView];
+//        [self initializeView: image];
     }
     return self;
 }
@@ -38,7 +39,7 @@ Circle *circle;
     self = [super initWithFrame:theFrame];
     if (self) {
         
-        [self initializeView];
+//        [self initializeView: image];
     }
     return self;
 }
@@ -47,12 +48,14 @@ Circle *circle;
     self = [super initWithCoder:decoder];
     if (self) {
         
-        [self initializeView];
+//        [self initializeView: image];
     }
     return self;
 }
 
--(void)initializeView{
+-(void)initializeView:(UIImage *)profileImage {
+    
+    image = profileImage;
     
     star = [[StarView alloc] init];
     
@@ -75,9 +78,8 @@ Circle *circle;
     
         [star startAnimation:^{
             [line startAnimation:^{
-                
+                [self addBubblesWithAnimationOnView];
                 [circle startAnimation:^{
-                    [self addBubblesWithAnimationOnView];
                 }];
             }];
         }];
@@ -177,6 +179,8 @@ Circle *circle;
     animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(startPoint, layer.position.y)];
     animation.toValue = [NSValue valueWithCGPoint:CGPointMake(layer.position.x, layer.position.y)];
     animation.duration = count*0.1;
+//    animation.repeatCount = 2;
+//    animation.autoreverses = YES;
     count++;
     [layer addAnimation:animation forKey:animation.keyPath];
     
@@ -249,7 +253,7 @@ Circle *circle;
     roundedLayer.masksToBounds = TRUE;
     roundedLayer.borderColor = [UIColor whiteColor].CGColor;
     roundedLayer.borderWidth = 2;
-    [roundedLayer setContents:(id)[UIImage imageNamed:@"images.jpeg"].CGImage];
+    [roundedLayer setContents:(id)image.CGImage ];
     
     return roundedLayer;
 }

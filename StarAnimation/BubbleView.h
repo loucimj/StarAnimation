@@ -22,5 +22,5 @@ typedef enum AnimationType
 
 @property (nonatomic) AnimationState *stateForAnimation;
 -(void)startAnimation;
--(void)initializeView;
+-(void)initializeView:(UIImage *)profileImage;
 @end

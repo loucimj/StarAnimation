@@ -30,7 +30,7 @@
     
     [CATransaction begin];
 
-    [UIView animateWithDuration:0.5 delay:.1 usingSpringWithDamping:0.2 initialSpringVelocity:5.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.2 initialSpringVelocity:5.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.transform = CGAffineTransformIdentity;
         self.alpha = 1;
 
